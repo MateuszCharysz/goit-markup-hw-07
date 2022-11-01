@@ -50,51 +50,77 @@ body {
   align-items: center;
 }
 
-.menu-flex-left {
+.menu-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-basis: 492px;
 }
 
-.menu-flex-right {
+.menu-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.nav-link {
-  vertical-align: middle;
+.menu-right__link {
+  text-decoration: none;
   font-weight: 500;
+  color: var(--ordinary-font-color);
+  line-height: var(--line-height-for-font-14);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  flex-basis: content;
+  margin-left: 30px;
+}
+
+.menu-right__link:focus,
+.menu-right__link:hover {
+  color: var(--highlight-color);
+  transition: color var(--transition-time-timing)
+}
+
+.menu-right__link:visited {
+  color: inherit;
+}
+
+.menu-right__icon-mail-phone {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.nav-submenu {
+  vertical-align: middle;
   display: flex;
   width: 254px;
   justify-content: space-between;
 }
 
-.link {
+.nav-submenu__link {
   text-decoration: none;
+  font-weight: 500;
   color: var(--main-font-color);
   line-height: var(--line-height-for-font-14);
   font-size: 14px;
   letter-spacing: 0.02em;
 }
 
-.link:visited {
+.nav-submenu__link:visited {
   color: inherit;
 }
 
-.link:focus,
-.link:hover {
+.nav-submenu__link:focus,
+.nav-submenu__link:hover {
   color: var(--highlight-color);
   transition: color var(--transition-time-timing)
 }
 
-.nav-link-present {
+.nav-submenu__link--present {
   position: relative;
   color: var(--highlight-color);
 }
 
-.nav-link-present::after {
+.nav-submenu__link--present::after {
   content: '';
   display: block;
   height: 4px;
@@ -105,18 +131,12 @@ body {
   border-radius: 2px;
 }
 
-.nav-link-present:visited {
+.nav-submenu__link--present:visited {
   color: var(--highlight-color);
 }
 
-.gray-mail-phone {
-  color: var(--ordinary-font-color);
-}
 
-.icon-mail-phone {
-  fill: currentColor;
-  margin-right: 10px;
-}
+
 
 .logo {
   font-family: "Raleway";
@@ -130,21 +150,16 @@ body {
   width: 145px;
 }
 
-.logo-color {
+.logo--color {
   background-image: linear-gradient(to right, var(--highlight-color) 0%, var(--highlight-color) 40.4%, var(--main-font-color) 40.4%, var(--main-font-color) 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-.logo-color-contr {
+.logo--color-contr {
   background-image: linear-gradient(to right, var(--highlight-color) 0%, var(--highlight-color) 40.4%, #fff 40.4%, #fff 100%);
   -webkit-background-clip: text;
   background-clip: text;
-}
-
-.flex-phone-mail {
-  flex-basis: content;
-  margin-left: 30px;
 }
 
 .contrast {
@@ -159,9 +174,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--bk-dark-color);
+  color: #fff;
 }
 
-.call-to-action-bg {
+.call-to-action--bg {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../images/index/cta_bg.jpg),
     linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1)100%);
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -169,7 +186,7 @@ body {
   background-position: center, center, center;
 }
 
-.call-to-action-h1 {
+.call-to-action__h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
