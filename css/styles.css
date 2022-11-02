@@ -72,12 +72,12 @@ body {
   letter-spacing: 0.02em;
   flex-basis: content;
   margin-left: 30px;
+  transition: color var(--transition-time-timing)
 }
 
 .menu-right__link:focus,
 .menu-right__link:hover {
   color: var(--highlight-color);
-  transition: color var(--transition-time-timing)
 }
 
 .menu-right__link:visited {
@@ -103,6 +103,7 @@ body {
   line-height: var(--line-height-for-font-14);
   font-size: 14px;
   letter-spacing: 0.02em;
+  transition: color var(--transition-time-timing)
 }
 
 .nav-submenu__link:visited {
@@ -112,7 +113,6 @@ body {
 .nav-submenu__link:focus,
 .nav-submenu__link:hover {
   color: var(--highlight-color);
-  transition: color var(--transition-time-timing)
 }
 
 .nav-submenu__link--present {
@@ -196,7 +196,7 @@ body {
   width: 696px;
 }
 
-.call-to-action-button {
+.button1 {
   background: var(--highlight-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   min-width: 200px;
@@ -213,8 +213,13 @@ body {
   justify-content: center;
 }
 
-.call-to-action-button:hover {
+.button1:hover {
   cursor: pointer;
+}
+
+.button1__icon-send {
+  margin-left: 24px;
+  fill: #fff;
 }
 
 .features {
@@ -229,7 +234,7 @@ body {
   width: 270px;
 }
 
-.feature>h3 {
+.feature__h3title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -242,7 +247,7 @@ body {
   margin-top: 30px;
 }
 
-.feature>p {
+.feature__description {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -252,7 +257,7 @@ body {
   color: var(--ordinary-font-color);
 }
 
-.icon-feature {
+.feature__icon {
   fill: var(--client-logo-color);
   background-color: var(--team-and-button-color);
   width: inherit;
@@ -274,7 +279,11 @@ body {
   width: 370px;
 }
 
-.box-label {
+.box__img {
+  display: block;
+}
+
+.box__label {
   font-weight: 700;
   font-size: 14px;
   line-height: var(--line-height-for-font-14);
@@ -288,18 +297,9 @@ body {
   position: absolute;
   bottom: 0px;
   background-color: rgba(47, 48, 58, 0.8);
+  color: #fff;
 }
 
-.h2-title {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
 
 .team {
   background: var(--team-and-button-color);
@@ -319,13 +319,10 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  line-height: 0;
 }
 
-.team-card-name {
+.team-card__name {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -339,7 +336,7 @@ body {
   margin: 30px auto 10px;
 }
 
-.team-card-job {
+.team-card__job {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -360,25 +357,24 @@ body {
   justify-content: space-between;
 }
 
-.client-list>li {
+.client-list__item {
   line-height: 0px;
 }
 
-.icon-client-logo {
+.client-list__logo {
   fill: var(--client-logo-color);
   width: 170px;
   height: 92px;
   border: 1px solid var(--client-logo-color);
   border-radius: 4px;
   padding: 16px 0;
+  transition: fill var(--transition-time-timing), border-color var(--transition-time-timing);
 }
 
-.icon-client-logo:hover {
+.client-list__logo:hover {
   fill: var(--highlight-color);
   border-color: var(--highlight-color);
   cursor: pointer;
-  transition: fill var(--transition-time-timing), border-color var(--transition-time-timing);
-
 }
 
 /*here start footer*/
@@ -421,40 +417,36 @@ body {
   margin-bottom: 20px;
 }
 
-.icon-social-list {
+.social-icon-list {
   display: flex;
   justify-content: space-between;
   width: 206px;
   margin: 0 auto;
 }
 
-.icon-social-list>li {
-  line-height: 0;
-}
-
-.icon-social-background {
+.social-icon-list__background-of-icon {
   background-color: var(--elipse);
   width: 44px;
   border-radius: 50%;
-}
-
-.icon-social-background:hover {
-  background-color: var(--highlight-color);
+  line-height: 0;
   transition: background-color var(--transition-time-timing);
-
 }
 
-.icon-social {
-  fill: var(--client-logo-color)
+.social-icon-list__background-of-icon:hover {
+  background-color: var(--highlight-color);
 }
 
-.icon-contrast {
+.social-icon-list__icon {
+  fill: var(--client-logo-color);
+  transition: fill var(--transition-time-timing);
+}
+
+.social-icon-list__icon--contrast {
   fill: #fff
 }
 
-.icon-social:hover {
+.social-icon-list__icon:hover {
   fill: #fff;
-  transition: fill var(--transition-time-timing);
 }
 
 .email-input {
@@ -484,9 +476,7 @@ body {
   width: 358px;
 }
 
-.icon-send {
-  margin-left: 24px;
-}
+
 
 /*here starts modal window (index.html) css*/
 .modal {
@@ -678,6 +668,8 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: inherit;
+    transition: background-color var(--transition-time-timing), color var(--transition-time-timing), box-shadow var(--transition-time-timing),
+        border-radius var(--transition-time-timing);
 }
 
 .filter-button:active,
@@ -689,8 +681,6 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--transition-time-timing), color var(--transition-time-timing), box-shadow var(--transition-time-timing),
-    border-radius var(--transition-time-timing);
 }
 
 .project-gallery {
@@ -714,13 +704,12 @@ body {
   margin-inline-start: 0;
   margin-inline-end: 0;
   flex-basis: calc((100%-60px)/3);
-
+  transition: box-shadow var(--transition-time-timing);
 }
 
 .project:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
-  transition: box-shadow var(--transition-time-timing);
 }
 
 .project:hover .project-overlay {
@@ -779,6 +768,17 @@ body {
 /*CSS positions universal (across many html)*/
 .section {
   padding: 94px 0;
+}
+
+.section__h2-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 
 .section-bot-margin {
