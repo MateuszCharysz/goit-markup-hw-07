@@ -743,7 +743,6 @@ body {
 
 .project:hover .project__overlay {
   transform: translateY(0);
-  transition: transform var(--transition-time-timing);
 }
 
 .project__overlay {
@@ -766,7 +765,6 @@ body {
 }
 
 .project__overlay-mask {
-  display: block;
   position: relative;
   overflow: hidden;
 }
