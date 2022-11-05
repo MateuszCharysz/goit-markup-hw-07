@@ -6,7 +6,7 @@
   border: 1px;
   border-style: solid;
   border-color: getColor(project-gallery-border);
-  flex-basis: calc((100%-60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
   transition: box-shadow $transition-time-timing;
   line-height: 0;
 

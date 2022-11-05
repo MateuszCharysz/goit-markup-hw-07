@@ -1,4 +1,12 @@
 .order-service {
+  %input-focus {
+    fill: getColor(highlighter);
+    border-color: getColor(highlighter);
+    outline-style: none;
+    transition: border-color $transition-time-timing,
+      fill $transition-time-timing;
+  }
+
   background-color: inherit;
   display: flex;
   flex-direction: column;
@@ -35,16 +43,12 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     text-indent: 42px;
-  }
-
-  &__squeres:focus ~ &__icon,
-  &__squeres:focus,
-  &__comment:focus {
-    fill: getColor(highlighter);
-    border-color: getColor(highlighter);
-    outline-style: none;
-    transition: border-color $transition-time-timing,
-      fill $transition-time-timing;
+    &:focus {
+      @extend %input-focus;
+    }
+    &:focus {
+      ~.order-service__icon {@extend %input-focus}
+    }
   }
 
   &__comment {
@@ -59,6 +63,9 @@
     height: 120px;
     resize: none;
     overflow: auto;
+    &:focus {
+      @extend %input-focus;
+    }
   }
 
   &__checkbox-label {
