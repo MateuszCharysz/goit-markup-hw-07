@@ -4,7 +4,6 @@
   --main-font-color: #212121;
   --ordinary-font-color: #757575;
   --line-height-for-font-14: 1.14;
-  --element-gap: 30px;
   --team-and-button-color: #f5f4fa;
   --project-gallery-border-color: #eeeeee;
   --client-logo-color: #AFB1B8;
@@ -509,6 +508,12 @@ body {
   padding: 14px 16px;
   width: 358px;
   background-color: inherit;
+  transition: border-color var(--transition-time-timing);
+}
+
+.email-input__entry:focus {
+  border-color: var(--highlight-color);
+  outline: none;
 }
 
 
@@ -719,7 +724,7 @@ body {
   padding: 0 15px;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--element-gap);
+  gap: 30px;
 
 }
 
