@@ -3,29 +3,29 @@
   align-items: center;
   justify-content: flex-end;
 
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    color: getColor(ordinary-font);
+    line-height: $line-height-for-font-14;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    flex-basis: content;
+    margin-left: 30px;
+    transition: color $transition-time-timing;
 
-&__link {
-  text-decoration: none;
-  font-weight: 500;
-  color: getColor(ordinary-font);
-  line-height: $line-height-for-font-14;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  flex-basis: content;
-  margin-left: 30px;
-  transition: color $transition-time-timing;
+    &:focus,
+    &:hover {
+      color: getColor(highlighter);
+    }
 
+    &:visited {
+      color: inherit;
+    }
+  }
 
-&:focus,
-&:hover {
-  color: getColor(highlight);
+  &__icon-mail-phone {
+    fill: currentColor;
+    margin-right: 10px;
+  }
 }
-
-&:visited {
-  color: inherit;
-}}
-
-&__icon-mail-phone {
-  fill: currentColor;
-  margin-right: 10px;
-}}

@@ -1,6 +1,6 @@
 $color: (
-  'highlight': #2196f3,
-  'bk-dark': #2f303a,
+  'highlighter': #2196f3,
+  'bg-dark': #2f303a,
   'main-font': #212121,
   'ordinary-font': #757575,
   'team-and-button': #f5f4fa,
@@ -36,6 +36,6 @@ ul {
 }
 
 body {
-  font-family: "Roboto", "Raleway", sans-serif;
+  font-family: 'Roboto', 'Raleway', sans-serif;
   color: getColor(main-font);
 }
